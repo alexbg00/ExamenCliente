@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 15%;
+    /* para suavizar los efectos */
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    z-index: 0;
+}
+
+#invitado {
+    color: #b83030;
+    font-style: italic;
+}
+
+div {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    /* Efecto de trasicion */
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    background-color: transparent;
+    z-index: 1;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Efecto de trasicion */
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    background-color: transparent;
+    color: red;
+    text-shadow: 1px 1px goldenrod;
+    font-size: calc(1.2em + 1vw + 1vh);
+    font-weight: bold;
+    z-index: 2;
+}
+
+.texto {
+    margin-top: 1em;
+}
+
+p:nth-child(3) {
+    color: rgb(2, 0, 128);
+    font-style: italic;
+}
+
+div:active,
+div:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+
+}
+
+
+@media all and (orientation:landscape) {
+
+    img,
+    div {
+        width: 70vh;
+        margin-left: calc(50vw - 35vh);
+    }
+}
+
+.baile {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* responsive movil */
+@media screen and (max-width: 600px) {
+    .baile {
+        width: 15em;
+        height: 10em;
+    }
+}
+
+.received {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+#name-song {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#prox {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+    margin: 2rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border-radius: 50%;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px #d4d4d4,
+        -5px -5px 10px #ffffff;
+    background-color: #ababab
+}
+
+/* Botones responsivos  */
+.button-sm {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.75;
+}
+
+.button-md {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0.85;
+}
+
+.button-lg {
+    width: 3.25rem;
+    height: 3.25rem;
+    box-shadow: inset 6px 6px 12px #c8c8c8,
+        inset -6px -6px 12px #ffffff
+}

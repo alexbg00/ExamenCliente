@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices Fiestas - Examen</title>
+    <link rel="stylesheet" href="./felices.css" />
+    <script src="https://kit.fontawesome.com/7d35781f0a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img src="./belen.webp" />
+
+    <div class="texto">
+        <p>Felices Fiestas <span id="invitado"></span></p>
+        <p>Te desea</p>
+        <p class="nombre">Alejandro</p>
+        <br /><br />
+        <span class="received">Recibido el día</span>
+        <p class="dia"></p>
+        <p id="parpadeo">Esta invitación es única</p>
+
+        <br/><br/>
+        <!-- Grupo de botones para el reproductor -->
+        <span id="prox">Proxima Cancion: </span>
+        <span id="name-song"></span>
+        <ul class="buttons">
+            <!-- Boton del reproducir para VOLVER de cancion -->
+            <buttton class="button button-md" onclick="previousSong()">
+                <i class="fas fa-step-backward" aria-hidden="true"></i>
+                <span class="sr-only">Anterior</span>
+            </buttton>
+            
+
+            <!-- Boton del reproducir para PARAR de cancion -->
+            <buttton class="button button-lg" onclick="playPause(event)">
+                <i class="fas fa-play fa-lg" id="play-pause" aria-hidden="true" aria-hidden="true"></i>
+                <span class="sr-only">Parar</span>
+            </buttton>
+
+            <!-- Boton del reproducir para PASAR de cancion -->
+            <buttton class="button button-md" onclick="nextSong()">
+                <i class="fas fa-step-forward"></i>
+                <span class="sr-only">Siguiente</span>
+            </buttton>
+        </ul>
+        <img class="baile" src="./baileRenos.gif" alt="baile de renos"/>
+    </div>
+
+    <script src="./felices.js"></script>
+</body>
+</html>
